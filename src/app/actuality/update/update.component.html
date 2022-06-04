@@ -1,0 +1,65 @@
+<div class="row ">
+    <div class="col-12 ">
+      <div class="card">
+        <div class="card-body">
+  
+          <div class="row">
+  
+            <div class="col-xl-12">
+              <div class="mb-3">
+                <label for="projectname" class="form-label"> Titre </label>
+                <input type="text" [(ngModel)]="actuality.title" id="projectname" class="form-control"
+                  placeholder="Saisir un titre de formation">
+              </div>
+  
+              <div class="mb-3">
+                <label for="project-overview" class="form-label">Description</label>
+                <textarea class="form-control" [(ngModel)]="actuality.description" id="project-overview" rows="5"
+                  placeholder="Saisir une description de l'emploi"></textarea>
+              </div>
+  
+              <!-- Date View -->
+              <div class="mb-3 position-relative" id="datepicker1">
+                <label class="form-label"> Date</label>
+                <input type="datetime-local" [(ngModel)]="actuality.date" class="form-control">
+              </div>
+            
+  
+              
+              <div class="mb-3 position-relative" id="datepicker1">
+                <label class="form-label"> image </label>
+                <input type="file" (change)="selectedimage($event)" class="form-control" placeholder="image">
+  
+              </div>
+             
+  
+  
+  
+               
+                <div class="mb-3 position-relative" id="datepicker1">
+                  <label class="form-label mt-2"> Direction</label>
+                  <input type="text" [(ngModel)]="actuality.direction" class="form-control">
+                </div>
+               
+  
+  
+  
+  
+  
+              <!-- end col-->
+  
+  
+              <!-- end col-->
+            </div>
+            <!-- end row -->
+  
+          </div>
+          <!-- end card-body -->
+        </div>
+        <!-- end card-->
+      </div>
+      <!-- end col-->
+    </div>
+    <!-- end row-->
+  </div>
+    <button class="btn btn-primary m-2 from-control  " (click)="update() ">Ajouter  </button>
