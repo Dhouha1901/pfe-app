@@ -20,12 +20,13 @@ export class HeaderComponent implements OnInit {
       return false ;
     }
   }
-
-  logout(){
-    localStorage.clear;
-    // this.router.navigate(['/login']);
-
+  hasPermission(){
+    if(localStorage.getItem('role')==="ADMIN"){
+      return true
+    }else
+    {
+      return false
+    }
   }
- 
 
 }

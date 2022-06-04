@@ -24,10 +24,15 @@
               <li class="nav-item " [routerLink]="['contact']" routerLinkActive="active">
                 <a class="nav-link" >Contact us</a>
               </li>
-              <li class="nav-item" [routerLink]="['loginn']" routerLinkActive="active">
+              <li *ngIf = "!present()" class="nav-item" [routerLink]="['loginn']" routerLinkActive="active">
                 <a class="nav-link" >Login</a>
               </li>
-              
+              <li *ngIf = "present()" class="nav-item" [routerLink]="['/logout']" routerLinkActive="active">
+                <a class="nav-link" >Logout</a>
+              </li>
+              <li *ngIf = "hasPermission()" class="nav-item" [routerLink]="['/listg']" routerLinkActive="active">
+                <a class="nav-link" >Gestion </a>
+              </li>
               <li class="nav-item" [routerLink]="['actuality']" routerLinkActive="active">
                 <a class="nav-link" >actuality</a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -42,13 +47,12 @@
                         <span>My Account</span>
                     </a>
     
-    
               
                     <!-- item-->
-                    <a (click)="logout()" class="dropdown-item notify-item">
+                    <!-- <a (click)="logout()" class="dropdown-item notify-item">
                         <i class="mdi mdi-logout me-1"></i>
                         <span>Logout</span>
-                    </a>
+                    </a> -->
                 </div>
               </li>
               

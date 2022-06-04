@@ -21,6 +21,8 @@ import { AjoutComponent } from './actuality/ajout/ajout.component';
 import { UpdateActualityComponent } from './actuality/update-actuality/update-actuality.component';
 import { ListComponent } from './actuality/list/list.component';
 import { UpdateComponent } from './actuality/update/update.component';
+import { HeaderUserComponent } from './header-user/header-user.component';
+import { LougoutComponent } from './lougout/lougout.component';
 
 
 
@@ -41,6 +43,8 @@ import { UpdateComponent } from './actuality/update/update.component';
     UpdateActualityComponent,
     ListComponent,
     UpdateComponent,
+    HeaderUserComponent,
+    LougoutComponent,
     
   ],
   imports: [

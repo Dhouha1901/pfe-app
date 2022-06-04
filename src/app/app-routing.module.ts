@@ -1,3 +1,5 @@
+import { AdminService } from './services/admin.service';
+import { LougoutComponent } from './lougout/lougout.component';
 import { UpdateComponent } from './actuality/update/update.component';
 import { ListComponent } from './actuality/list/list.component';
 import { AjoutComponent } from './actuality/ajout/ajout.component';
@@ -23,18 +25,18 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'contact', component:ContactComponent},
   {path:'agences', component:AgencesComponent},
-  {path:'loginn', component:LoginnComponent},
+  {path:'loginn', component:LoginnComponent },
   {path:'actuality', component:ActualityComponent},
   {path:'siege', component:SiegeComponent},
   {path:'profil', component:ProfilComponent},
 
   {path:'ajoutg', component:AjoutComponent},
 
-  {path:'listg', component:ListComponent},
+  {path:'listg', component:ListComponent ,  canActivate: [AdminService] },
   
   {path:'update/:id', component:UpdateComponent},
 
-
+  {path:'logout', component:LougoutComponent},
 
 ];
 

@@ -133,6 +133,10 @@ section .section-title {
 .backside .card .card-title {
     color: #007b5e !important;
 }
+.frontside .card .card-button,
+.backside .card .card-button {
+    color: black !important;
+}
 
 .frontside .card .card-body img {
     width: 120px;
